@@ -68,7 +68,11 @@ def main():
     robot = robot_cartpole(dynamics_algo, links)
 
     world.add_object(robot)
-    world.run(5000)
+
+    try:
+        world.run(5000)
+    except:
+        pass
 
 if __name__=="__main__":
     main()
