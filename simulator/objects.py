@@ -13,6 +13,7 @@ def mcI(mass, com, Icm):
     I[3:6, 3:6] = mass * np.eye(3)
     return I
 
+
 class RobotTree:
     def __init__(self):
         self.xfd = np.zeros(6)
@@ -57,7 +58,6 @@ class RobotTree:
             model['I'].append(mcI(mass, CoM, Icm))
         
         self.model = model
-
 
 
 class TwoLink():

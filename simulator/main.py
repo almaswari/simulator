@@ -5,7 +5,7 @@ from physics import PhysicsEngine
 from renderer import Renderer
 from world import World
 
-from objects import RobotTree, TwoLink, Tree7
+from objects import RobotTree, TwoLink, Tree7, CartPole
 from dynamics.ab_algorithm import ABAlgorithm
 
 def main():
@@ -20,8 +20,11 @@ def main():
     # robot = TwoLink()
     # robot = Tree7()
 
-    robot = RobotTree()
-    robot.some_tree(8,2)
+    # robot = RobotTree()
+    # robot.some_tree(8,2)
+
+    robot = CartPole()
+
 
     world.add_object(robot)
 
