@@ -21,7 +21,6 @@ class RNEAlgorithm:
             # qdd = int(M) (tau_ext - C -G)
             ddq = np.linalg.solve(M, tau_ext - G - C)
         except np.linalg.LinAlgError as e:
-            logger.error("Mass matrix is singular: %s", e)
             raise
 
         return ddq

@@ -7,12 +7,26 @@ requires-python = ">=3.12"
 dependencies = [
     "numpy>=2.4.4",
     "pre-commit>=4.6.0",
+    "pytest>=9.0.3",
     "ruff>=0.15.12",
 ]
 
 [tool.ruff.lint]
-select = ["E", "F"]
-ignore = ["F401"]
+unfixable = ["ALL"]
+select = [
+    # pycodestyle
+    "E",
+    # Pyflakes
+    "F",
+    # pyupgrade
+    "UP",
+    # flake8-bugbear
+    "B",
+    # flake8-simplify
+    "SIM",
+    # isort
+    "I",
+]
 
 [tool.ruff]
 line-length = 100

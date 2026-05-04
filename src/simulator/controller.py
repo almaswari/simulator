@@ -56,7 +56,7 @@ class CartPoleLQRController:
         self.E_target = self.mass2 * self.g * self.l
 
     def _compute_model(self):
-        m1, m2, l, g = self.mass1, self.mass2, self.l, self.g
+        m1, m2, g = self.mass1, self.mass2, self.l, self.g
 
         A = np.array(
             [
